@@ -1,6 +1,6 @@
 package chap2;
 public class CharBoolDemo {
-	public static void main(String arg[]) {
+	public static void main(String[] args) {
 		char ga1 = '가';
 		char ga2 = '\uac00';
 		

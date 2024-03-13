@@ -1,7 +1,7 @@
 package chap2;
 
 public class NumberType {
-	public static void main(String arg[]) {
+	public static void main(String[] args) {
 		int mach = 340;
 		int distance = mach * 60 * 60;
 		System.out.println("소리가 1시간 동안 가는 거리 : " + distance + " m");
