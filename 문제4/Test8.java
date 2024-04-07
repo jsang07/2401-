@@ -2,34 +2,36 @@ package test;
 
 import java.util.Scanner;
 
-enum Day{
-    SUNDAY("일요일") , MONDAY("싫다"), TUSEDAY("화요일"), WENDSDAY("수요일"), THURSDAY("목요일"), FRIDAY("금요일"), SATURDAY("토요일");
-
-    private String day;
-    Day(String day){
-        this.day = day;
-    }
-
-    public String toString(){
-        return day;
-    }
+enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
 }
 
 public class Test8 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String day = in.nextLine().toLowerCase();
-
-        switch (day){
-            case "monday" :
-                System.out.println(day);
-                System.out.println(Day.MONDAY+ "은 싫다");
+    public static void printFeeling(Day day) {
+        switch (day) {
+            case MONDAY:
+                System.out.println("월요일은 싫다.");
                 break;
+            case FRIDAY:
+                System.out.println("금요일은 좋다.");
+                break;
+            case SATURDAY:
+            case SUNDAY:
+                System.out.println("최고.");
+                break;
+            default:
+                System.out.println("그저 그렇다.");
         }
-
     }
 
-    static void feel(String day){
-        System.out.println(day);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine().toUpperCase();
+
+        printFeeling(Day.valueOf(input));
     }
 }
+
+
+
+
